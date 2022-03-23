@@ -8,7 +8,8 @@ public class Program {
 
         System.out.println("Program starting");
         // oppgave4();
-        oppgave6();
+        //oppgave6();
+        oppgave7();
 
     }
 
@@ -49,5 +50,30 @@ public class Program {
         }
         System.out.println("Sum:"+sum);
 
+    }
+
+    private void oppgave7() {
+        int choice = 0;
+        Scanner input = new Scanner(System.in);
+        ArrayList<String> strings = new ArrayList<>();
+        while (choice!=3) {
+            System.out.println("1. Add single word");
+            System.out.println("2. Display all words");
+            System.out.println("End");
+            choice = input.nextInt();
+
+            if (choice == 1) {
+                System.out.println("Write word:");
+                strings.add(input.next());
+            } else if (choice == 2) {
+                System.out.println("Here are all the words:");
+                    for (String s :
+                        strings) {
+                        System.out.println(s);
+                    }
+            } else {
+                System.out.println("BYE!");
+            }
+        }
     }
 }
